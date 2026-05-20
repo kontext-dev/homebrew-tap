@@ -5,28 +5,30 @@
 class Kontext < Formula
   desc "Identity, credentials, and governance for AI agents"
   homepage "https://kontext.security"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
+
+  depends_on "llama.cpp"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.7.0/kontext_0.7.0_darwin_amd64.tar.gz"
-      sha256 "9ac01e7e96c04958001baaa1d2712e5df6eb79193284fc01ee8d47f1b509fa1c"
+      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.8.0/kontext_0.8.0_darwin_amd64.tar.gz"
+      sha256 "2e91b886fa2a2d9a4dd466330b20dbbbdb6a74b1a25a8e33ca32026b1fa09ff8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.7.0/kontext_0.7.0_darwin_arm64.tar.gz"
-      sha256 "67a6d36a142eb093355e4c1da896bcb364e1b8e700a6eca3729257cc90b250a6"
+      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.8.0/kontext_0.8.0_darwin_arm64.tar.gz"
+      sha256 "772cd2e69d239a3cc9cbe400b86778b636e5f129b3fe419ab2b2faa41b9a7743"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.7.0/kontext_0.7.0_linux_amd64.tar.gz"
-      sha256 "c9d78ec3788daa3361341bae5a850db4055ac91b08d6aa2c33323c2a59703bff"
+      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.8.0/kontext_0.8.0_linux_amd64.tar.gz"
+      sha256 "3687b3824aa240b2324eaaf328590b0700257f6e58152f9e1ab6190e2e202c97"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.7.0/kontext_0.7.0_linux_arm64.tar.gz"
-      sha256 "3ba070fcd32e25b39df7f4569dd455c183fa027072094da0b79067870a624d75"
+      url "https://github.com/kontext-security/kontext-cli/releases/download/v0.8.0/kontext_0.8.0_linux_arm64.tar.gz"
+      sha256 "0b54dd25e77ec1d7b60021f8bc642d26687d1049523df47ed0b8982008f0a0b0"
     end
   end
 
